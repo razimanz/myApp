@@ -1,3 +1,4 @@
+import { DetailContactPage } from '../../pages/detail-contact/detail-contact';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { PeopleProvider } from '../../providers/people/people';
@@ -7,6 +8,10 @@ import { PeopleProvider } from '../../providers/people/people';
   templateUrl: 'contact.html'
 })
 export class ContactPage {
+
+  pushPerson(user) {
+    this.navCtrl.push(DetailContactPage,user)
+  }
 
   // public people = [
   //   {
